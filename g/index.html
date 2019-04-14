@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="/js/Chart.min.js"></script>
+	<!--<script src="js/utils.js"></script>-->
+	<script type="text/javascript" src="/eel.js"></script>
+	
+</head>
+	
+<body>
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+	  
+	<div class="row">
+	  <div class="col s2">
+	    <h2 class="orange-text">CPU</h2>
+	  </div>
+    </div>
+    <div class="row">
+	  <div class="col s2">
+	    <h5>Usage:</h5>
+	  </div>
+	  <div class="col s1"><h5 id="cpunum" class="blue-grey-text">0</h5></div>
+	  <div class="col s1"><h5 class="blue-grey-text">%</h5></div>
+	  <div class="col s2">
+	    <h5>Threshold:</h5>
+	  </div>
+	  <div class="col s6">
+	    <form action="#">
+    	  <p class="range-field">
+      		<input type="range" id="cputhre" min="0" max="100" />
+   		  </p>
+  	    </form>
+	  </div>  
+	</div>
+	<canvas id="cpuchart"></canvas>  
+	
+	  
+	<div class="row">
+	  <div class="col s2">
+	    <h2 class="orange-text">Memory</h2>
+	  </div>
+    </div>
+    <div class="row">
+	  <div class="col s2">
+	    <h5>Usage:</h5>
+	  </div>
+		<div class="col s1"><h5 class="blue-grey-text" id="memnum">0</h5></div>
+		<div class="col s1"><h5 class="blue-grey-text">%</h5></div>
+	  <div class="col s2">
+	    <h5>Threshold:</h5>
+	  </div>
+	  <div class="col s6">
+	    <form action="#">
+    	  <p class="range-field">
+      		<input type="range" id="memthre" min="0" max="100" />
+   		  </p>
+  	    </form>
+	  </div>  
+	</div>
+	<canvas id="memchart"></canvas>  
+	<div class="row">
+	  <div class="col s2">
+	    <h2 class="orange-text">Disk</h2>
+	  </div>
+    </div>
+		<table>
+			<thead>
+				<tr>
+						<th>Disk Number</th>
+						<th>Total Size</th>
+						<th>Available space</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>Disk1</td>
+					<td id='total1'>0</td>
+					<td id='use1'>0</td>
+				</tr>
+				<tr>
+					<td>Disk2</td>
+					<td id='total2'>0</td>
+					<td id='use2'>0</td>
+				</tr>
+				<tr>
+					<td>Disk3</td>
+					<td id='total3'>0</td>
+					<td id='use3'>0</td>
+				</tr>
+				<tr>
+					<td>Disk4</td>
+					<td id='total4'>0</td>
+					<td id='use4'>0</td>
+				</tr>
+				<tr>
+					<td>Disk5</td>
+					<td id='total5'>0</td>
+					<td id='use5'>0</td>
+				</tr>
+				<tr>
+					<td>Disk6</td>
+					<td id='total6'>0</td>
+					<td id='use6'>0</td>
+				</tr>
+				<tr>
+					<td>Disk7</td>
+					<td id='total7'>0</td>
+					<td id='use7'>0</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	<div class="row">
+	  <div class="col s2">
+	    <h2 class="orange-text">Network</h2>
+	  </div>
+    </div>
+    <div class="row">
+	  <div class="col s2"><h5>In:</h5></div>
+		<div class="col s4"><h5 class="blue-grey-text" id="netin">0</h5></div>
+
+		<div class="col s2"><h5>Out:</h5></div>
+		<div class="col s4"><h5 class="blue-grey-text" id="netout">0</h5></div>
+
+	</div>
+</div>
+</div>
+<!--  Scripts-->
+  <script src="js/cpu.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
