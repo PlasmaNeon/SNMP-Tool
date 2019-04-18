@@ -15,6 +15,3 @@ For SJTU Course EE380.
 `python setup_eel.py` to start a local server.
 `python cmd_oid.py` to manually input oid.
 
-## To-do
-- [ ] Trap function.
-- [ ] Set function.
